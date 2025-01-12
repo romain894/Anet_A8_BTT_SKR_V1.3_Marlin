@@ -72,14 +72,23 @@ Connection table:
 | GND    | GND                |
 
 
+
+## Compile the firmware (optional)
+
+Download Marlin 2.1.2.5 (or the newer non-major release), and replace the following configuration files by the ones of this repository:
+
+  - `Marlin/Configuration.h` (in `en/` or `fr/`)
+  - `Marlin/Configuration_adv.h`
+  - `Marlin/src/HAL/LPC1768/HAL.h`
+  - `Marlin/src/pins/lpc1768/pins_BTT_SKR_V1_3.h`
+  - `platformio.ini`
+
+Install platformio, compile, and copy the file `.pio/build/LPC1768/firmware.bin` to the micro SD card.
+
+
 ## Upload the firmware
 
-Copy the file (`` or ``) and put it on a micro SD card. Insert the micro SD while the 3D printer is powered off and the firmware will be updated at the next startup.
-
-## Compile the firmware
-
-Download Marlin 2.1.2.5 (or the newer non-major release), and replace the configuration files by the ones of this repository.
-Install platformio, compile, and copy the file `.pio/build/LPC1768/firmware.bin` to the micro SD card.
+Copy the file `firmware.bin` (in `en/` or `fr/`) and put it on a micro SD card. Insert the micro SD while the 3D printer is powered off and the firmware will be updated at the next startup.
 
 
 Romain THOMAS 2025
